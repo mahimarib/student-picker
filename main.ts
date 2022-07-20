@@ -1,19 +1,28 @@
 const pnjMiddleSchool = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F"
+    "Jason",
+    "Tahj",
+    "Kalel",
+    "Jacey",
+    "Layla",
+    "Sophia",
+    "Dante",
+    "Lala",
+    "Kloe"
 ];
 
 const pnjElemSchool = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6"
+    "Garvin",
+    "Malakai",
+    "Ryan",
+    "Jacob",
+    "Jayla",
+    "Jaslene",
+    "Veronica",
+    "William",
+    "Alina",
+    "Ethan",
+    "Jaelyn",
+    "Yaniah"
 ];
 
 function shuffleArray (arr: any[]) {
@@ -42,9 +51,11 @@ function getPicker (arr: string[]) {
 const pnjMiddlePicker = getPicker(pnjMiddleSchool)
 const pnjElemPicker = getPicker(pnjElemSchool);
 
-input.onButtonPressed(Button.A, () => 
-    basic.showString(pnjMiddlePicker()));
+let pickedStudent = "";
 
-input.onButtonPressed(Button.B, () => 
-    basic.showString(pnjElemPicker()));
+basic.forever(() => basic.showString(pickedStudent, 65));
+
+input.onButtonPressed(Button.A, () => pickedStudent = pnjMiddlePicker());
+
+input.onButtonPressed(Button.B, () => pickedStudent = pnjElemPicker());
 
