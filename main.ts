@@ -53,9 +53,7 @@ const pnjElemPicker = getPicker(pnjElemSchool);
 
 let pickedStudent = "";
 
-basic.forever(() => basic.showString(pickedStudent, 65));
-
 input.onButtonPressed(Button.A, () => pickedStudent = pnjMiddlePicker());
-
 input.onButtonPressed(Button.B, () => pickedStudent = pnjElemPicker());
 
+basic.forever(() => basic.showString(pickedStudent, 65));
